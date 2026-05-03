@@ -13,8 +13,13 @@ def form():
         return f"Hello, {name}!"
     return render_template("form.html")
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
 @app.route("/about")
 def about():
     return "This is the about page."
+
+@app.route("/api/info")
+def info():
+    return {"project": "DevOps App", "status": "running in Docker"}
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
