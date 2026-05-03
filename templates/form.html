@@ -2,12 +2,21 @@
 <html>
 <head>
     <title>Form Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #eef2f7; }
+        .container { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input[type=text] { width: 100%; padding: 10px; margin: 10px 0; }
+        input[type=submit] { background: #3498db; color: white; border: none; padding: 10px; cursor: pointer; }
+        input[type=submit]:hover { background: #2980b9; }
+    </style>
 </head>
 <body>
-    <h2>Enter your name:</h2>
-    <form method="POST">
-        <input type="text" name="name" placeholder="Your name">
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        <h2>Enter Your Name</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your name here">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
